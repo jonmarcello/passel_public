@@ -133,7 +133,7 @@ async def on_guild_channel_pins_update(channel, last_pin):
         if len(numPins) < 49 and sendall == 1:
             last_pinned = numPins[0]
             pinEmbed = discord.Embed(
-                description="\"" + last_pinned.content + "\"",
+                description=last_pinned.content,
                 colour=EMBED_COLORS[randomColor]
             )
             # checks to see if pinned message has attachments
